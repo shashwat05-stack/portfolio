@@ -24,6 +24,7 @@ export const GfgIcon = ({ size = 20, className = "" }) => (
 
 // Re-export needed Lucide icons safely
 export {
+  Home as HomeIcon,
   Mail as MailIcon,
   Code2 as CodeIcon,
   Download as DownloadIcon,
@@ -39,4 +40,6 @@ export {
   ArrowRight as ArrowRightIcon,
   ArrowUpRight as ArrowUpRightIcon,
   FileText as FileTextIcon,
+  GraduationCap as GraduationCapIcon,
+  Briefcase as BriefcaseIcon,
 } from "lucide-react";

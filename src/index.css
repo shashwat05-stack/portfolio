@@ -158,11 +158,11 @@ img {
 .section {
   max-width: 1400px;
   margin: auto;
-  padding: 120px max(6vw, 30px);
+  padding: 75px max(6vw, 30px);
 }
 
 .section-heading {
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 .section-heading > p,
@@ -259,14 +259,15 @@ img {
 /* HERO */
 
 .hero {
-  min-height: 100vh;
+  min-height: 82vh;
 
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 80px;
+  gap: 55px;
 
-  padding-top: 130px;
+  padding-top: 105px;
+  padding-bottom: 35px;
   position: relative;
 }
 
@@ -1580,13 +1581,20 @@ body::after {
   color: #ffffff;
 }
 
-.sidebar-link-github:hover { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 16px rgba(255, 255, 255, 0.2); }
-.sidebar-link-linkedin:hover { border-color: rgba(10, 102, 194, 0.8); box-shadow: 0 0 18px rgba(10, 102, 194, 0.35); }
-.sidebar-link-leetcode:hover { border-color: rgba(255, 161, 22, 0.85); box-shadow: 0 0 22px rgba(255, 161, 22, 0.35); color: #FFA116; }
-.sidebar-link-gfg:hover { border-color: rgba(47, 141, 70, 0.85); box-shadow: 0 0 25px rgba(47, 141, 70, 0.35); color: #2F8D46; }
-.sidebar-link-email:hover { border-color: rgba(236, 72, 153, 0.8); box-shadow: 0 0 18px rgba(236, 72, 153, 0.35); }
-.sidebar-link-user:hover { border-color: rgba(6, 182, 212, 0.8); box-shadow: 0 0 18px rgba(6, 182, 212, 0.35); }
-.sidebar-link-resume:hover { border-color: rgba(139, 92, 246, 0.8); box-shadow: 0 0 18px rgba(139, 92, 246, 0.35); }
+.sidebar-link-home:hover, .sidebar-link-home.active { border-color: rgba(146, 92, 255, 0.85); box-shadow: 0 0 20px rgba(146, 92, 255, 0.4); color: #a78bfa; }
+.sidebar-link-about:hover, .sidebar-link-about.active { border-color: rgba(6, 182, 212, 0.85); box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); color: #22d3ee; }
+.sidebar-link-skills:hover, .sidebar-link-skills.active { border-color: rgba(250, 204, 21, 0.85); box-shadow: 0 0 20px rgba(250, 204, 21, 0.4); color: #facc15; }
+.sidebar-link-projects:hover, .sidebar-link-projects.active { border-color: rgba(249, 115, 22, 0.85); box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); color: #f97316; }
+.sidebar-link-education:hover, .sidebar-link-education.active { border-color: rgba(59, 130, 246, 0.85); box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); color: #60a5fa; }
+.sidebar-link-github:hover, .sidebar-link-github.active { border-color: rgba(255, 255, 255, 0.85); box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); color: #ffffff; }
+.sidebar-link-gfg:hover, .sidebar-link-gfg.active { border-color: rgba(47, 141, 70, 0.85); box-shadow: 0 0 22px rgba(47, 141, 70, 0.4); color: #2F8D46; }
+.sidebar-link-contact:hover, .sidebar-link-contact.active { border-color: rgba(236, 72, 153, 0.85); box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); color: #ec4899; }
+.sidebar-link-resume:hover, .sidebar-link-resume.active { border-color: rgba(139, 92, 246, 0.85); box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); color: #c084fc; }
+
+.sidebar-icon-btn.active {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.08);
+}
 
 .sidebar-tooltip {
   position: absolute;
