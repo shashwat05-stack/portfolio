@@ -71,7 +71,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-grid">
-        <div className="contact-left">
+        <div className="contact-left reveal">
           <p className="small-label">CONTACT INFORMATION</p>
 
           <h3>Let's Connect.</h3>
@@ -166,7 +166,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="contact-card">
+        <div className="contact-card reveal">
           <div className="contact-card-header">
             <p className="small-label">SEND A MESSAGE</p>
             <h3>Start a conversation.</h3>

@@ -1,7 +1,7 @@
 const Resume = () => {
   return (
     <section className="resume-section">
-      <div className="resume-box">
+      <div className="resume-box reveal">
         <div>
           <p className="small-label">MY RESUME</p>
 

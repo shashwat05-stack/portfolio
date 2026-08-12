@@ -30,7 +30,7 @@ const About = () => {
       </div>
 
       <div className="about-layout">
-        <div className="about-text">
+        <div className="about-text reveal">
           <h3>
             I love building things <span>with code.</span>
           </h3>
@@ -60,7 +60,7 @@ const About = () => {
 
         <div className="about-cards">
           {cards.map((card) => (
-            <div className="info-card" key={card.title}>
+            <div className="info-card reveal" key={card.title}>
               <div className="info-icon">{card.icon}</div>
 
               <h4>{card.title}</h4>

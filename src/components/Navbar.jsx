@@ -1,26 +1,43 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const sections = [
+  "home",
+  "about",
+  "skills",
+  "projects",
+  "education",
+  "contact",
+];
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "skills", "projects", "education", "contact"];
-    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 180;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
 
-    sections.forEach((section) => observer.observe(section));
+        if (!section) continue;
 
-    return () => observer.disconnect();
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+          setActiveSection(sectionId);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -30,28 +47,19 @@ const Navbar = () => {
       </a>
 
       <div className="nav-links">
-        <a href="#home" className={activeSection === "home" ? "active" : ""}>
-          Home
-        </a>
-        <a href="#about" className={activeSection === "about" ? "active" : ""}>
-          About
-        </a>
-        <a href="#skills" className={activeSection === "skills" ? "active" : ""}>
-          Skills
-        </a>
-        <a href="#projects" className={activeSection === "projects" ? "active" : ""}>
-          Projects
-        </a>
-        <a href="#education" className={activeSection === "education" ? "active" : ""}>
-          Education
-        </a>
-        <a href="#contact" className={activeSection === "contact" ? "active" : ""}>
-          Contact
-        </a>
+        {sections.map((section) => (
+          <a
+            key={section}
+            href={`#${section}`}
+            className={activeSection === section ? "active" : ""}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </a>
+        ))}
       </div>
 
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com&su=Portfolio%20Contact"
         target="_blank"
         rel="noopener noreferrer"
         className="outline-btn nav-btn"
@@ -63,4 +71,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

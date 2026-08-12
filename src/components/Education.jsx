@@ -6,7 +6,7 @@ const Education = () => {
         <h2>Education</h2>
       </div>
 
-      <div className="education-card">
+      <div className="education-card reveal">
         <div className="education-year">2024 — 2028</div>
 
         <div>

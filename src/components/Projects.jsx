@@ -62,7 +62,7 @@ const projects = [
 const Projects = () => {
   return (
     <section className="section projects-section" id="projects">
-      <div className="section-heading center-heading">
+      <div className="section-heading center-heading reveal">
         <p>SELECTED WORK</p>
         <h2>Featured Projects</h2>
         <span>
@@ -71,21 +71,14 @@ const Projects = () => {
       </div>
 
       <div className="projects-list">
-        {projects.map((project, index) => {
-          const projectSlug = project.title.toLowerCase().includes("weather")
-            ? "project-weather"
-            : project.title.toLowerCase().includes("movie")
-            ? "project-moviesphere"
-            : "project-spendwise";
-
-          return (
-            <article
-              className={`project-row ${projectSlug} ${
-                index % 2 !== 0 ? "project-reverse" : ""
-              }`}
-              key={project.title}
-            >
-            <div className="project-image">
+        {projects.map((project, index) => (
+          <article
+            className={`project-row project-${index + 1} reveal ${
+              index % 2 !== 0 ? "project-reverse" : ""
+            }`}
+            key={project.title}
+          >
+            <div className="project-image project-glass">
               <div className="browser-bar">
                 <div>
                   <span></span>
@@ -148,8 +141,7 @@ const Projects = () => {
               </div>
             </div>
           </article>
-          );
-        })}
+        ))}
       </div>
 
       <div className="github-more">
