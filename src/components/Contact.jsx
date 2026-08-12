@@ -27,7 +27,12 @@ const Contact = () => {
           </p>
 
           <div className="contact-items">
-            <a href="mailto:shashwatgupta205@gmail.com?subject=Portfolio%20Contact" className="contact-link">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
               <span>✉</span>
 
               <div>
@@ -116,7 +121,9 @@ const Contact = () => {
           </p>
 
           <a
-            href="mailto:shashwatgupta205@gmail.com?subject=Portfolio%20Contact"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+            target="_blank"
+            rel="noopener noreferrer"
             className="primary-btn contact-email-btn"
           >
             Send an Email ↗

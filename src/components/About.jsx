@@ -52,7 +52,9 @@ const About = () => {
           </p>
 
           <a
-            href="mailto:shashwatgupta205@gmail.com?subject=Portfolio%20Contact"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-link"
           >
             Let's Connect →
