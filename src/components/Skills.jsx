@@ -1,11 +1,75 @@
 import {
+  SiJavascript,
+  SiPython,
+  SiMysql,
+  SiHtml5,
+  SiReact,
+  SiVite,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiSupabase,
+  SiGit,
+  SiGithub,
+  SiVercel,
+  SiNetlify,
+  SiTensorflow,
+} from "react-icons/si";
+
+import { FaJava, FaCss3Alt } from "react-icons/fa6";
+
+import {
   CodeIcon,
   MonitorIcon,
   ServerIcon,
   DatabaseIcon,
   WrenchIcon,
   BrainIcon,
+  SparklesIcon,
 } from "./Icons";
+
+// Custom OpenAI Icon SVG
+const OpenAiIcon = ({ size = 18, className = "", style = {} }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    style={style}
+    aria-hidden="true"
+  >
+    <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9 6.0651 6.0651 0 0 0-4.3368-1.9168 6.001 6.001 0 0 0-5.764 4.195 6.0506 6.0506 0 0 0-4.148 2.898A5.998 5.998 0 0 0 2.222 13.067a5.9847 5.9847 0 0 0 .5157 4.9108 6.0462 6.0462 0 0 0 6.5098 2.9 6.0651 6.0651 0 0 0 4.3368 1.9168 6.001 6.001 0 0 0 5.764-4.195 6.0506 6.0506 0 0 0 4.148-2.898 5.998 5.998 0 0 0-1.2144-5.88zM12 18.5a6.5 6.5 0 1 1 6.5-6.5 6.507 6.507 0 0 1-6.5 6.5z" />
+  </svg>
+);
+
+// Map each technology to its exact brand icon component and color
+const techIconMap = {
+  Java: { icon: FaJava, color: "#ED8B00", class: "skill-java" },
+  JavaScript: { icon: SiJavascript, color: "#F7DF1E", class: "skill-javascript" },
+  Python: { icon: SiPython, color: "#3776AB", class: "skill-python" },
+  SQL: { icon: SiMysql, color: "#4479A1", class: "skill-sql" },
+  HTML: { icon: SiHtml5, color: "#E34F26", class: "skill-html" },
+  CSS: { icon: FaCss3Alt, color: "#1572B6", class: "skill-css" },
+  "React.js": { icon: SiReact, color: "#61DAFB", class: "skill-react" },
+  Vite: { icon: SiVite, color: "#646CFF", class: "skill-vite" },
+  "Node.js": { icon: SiNodedotjs, color: "#339933", class: "skill-node" },
+  "Express.js": { icon: SiExpress, color: "#FFFFFF", class: "skill-express" },
+  "REST APIs": { icon: ServerIcon, color: "#06B6D4", class: "skill-api" },
+  MongoDB: { icon: SiMongodb, color: "#47A248", class: "skill-mongodb" },
+  PostgreSQL: { icon: SiPostgresql, color: "#4169E1", class: "skill-postgres" },
+  MySQL: { icon: SiMysql, color: "#4479A1", class: "skill-mysql" },
+  Supabase: { icon: SiSupabase, color: "#3ECF8E", class: "skill-supabase" },
+  Git: { icon: SiGit, color: "#F05032", class: "skill-git" },
+  GitHub: { icon: SiGithub, color: "#FFFFFF", class: "skill-github" },
+  Vercel: { icon: SiVercel, color: "#FFFFFF", class: "skill-vercel" },
+  Netlify: { icon: SiNetlify, color: "#00C7B7", class: "skill-netlify" },
+  "OpenAI APIs": { icon: OpenAiIcon, color: "#10A37F", class: "skill-openai" },
+  "LLM Prompting": { icon: BrainIcon, color: "#EC4899", class: "skill-llm" },
+  TensorFlow: { icon: SiTensorflow, color: "#FF6F00", class: "skill-tensorflow" },
+  "CI/CD": { icon: SparklesIcon, color: "#8B5CF6", class: "skill-cicd" },
+};
 
 const skillGroups = [
   {
@@ -13,71 +77,42 @@ const skillGroups = [
     title: "Programming",
     icon: CodeIcon,
     color: "orange",
-    skills: [
-      ["Java", "java"],
-      ["JavaScript", "javascript"],
-      ["Python", "python"],
-      ["SQL", "sql"],
-    ],
+    skills: ["Java", "JavaScript", "Python", "SQL"],
   },
   {
     number: "02",
     title: "Frontend",
     icon: MonitorIcon,
     color: "cyan",
-    skills: [
-      ["HTML", "html"],
-      ["CSS", "css"],
-      ["React.js", "react"],
-      ["Vite", "vite"],
-    ],
+    skills: ["HTML", "CSS", "React.js", "Vite"],
   },
   {
     number: "03",
     title: "Backend",
     icon: ServerIcon,
     color: "green",
-    skills: [
-      ["Node.js", "node"],
-      ["Express.js", "express"],
-      ["REST APIs", "api"],
-    ],
+    skills: ["Node.js", "Express.js", "REST APIs"],
   },
   {
     number: "04",
     title: "Databases",
     icon: DatabaseIcon,
     color: "blue",
-    skills: [
-      ["MongoDB", "mongodb"],
-      ["PostgreSQL", "postgres"],
-      ["MySQL", "mysql"],
-      ["Supabase", "supabase"],
-    ],
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Supabase"],
   },
   {
     number: "05",
     title: "Tools & Deployment",
     icon: WrenchIcon,
     color: "purple",
-    skills: [
-      ["Git", "git"],
-      ["GitHub", "github"],
-      ["Vercel", "vercel"],
-      ["Netlify", "netlify"],
-    ],
+    skills: ["Git", "GitHub", "Vercel", "Netlify"],
   },
   {
     number: "06",
     title: "AI & Other",
     icon: BrainIcon,
     color: "pink",
-    skills: [
-      ["OpenAI APIs", "ai"],
-      ["LLM Prompting", "llm"],
-      ["TensorFlow", "tensorflow"],
-      ["CI/CD", "cicd"],
-    ],
+    skills: ["OpenAI APIs", "LLM Prompting", "TensorFlow", "CI/CD"],
   },
 ];
 
@@ -96,7 +131,7 @@ const Skills = () => {
 
       <div className="skills-grid">
         {skillGroups.map((group, index) => {
-          const Icon = group.icon;
+          const GroupIcon = group.icon;
           return (
             <div
               className={`skill-card skill-${group.color} reveal`}
@@ -105,7 +140,7 @@ const Skills = () => {
             >
               <div className="skill-top">
                 <div className={`skill-icon skill-icon-${group.color}`}>
-                  <Icon size={22} />
+                  <GroupIcon size={22} />
                 </div>
 
                 <span className="skill-number">{group.number}</span>
@@ -114,16 +149,29 @@ const Skills = () => {
               <h3>{group.title}</h3>
 
               <div className="skill-tags">
-                {group.skills.map(([skill, type], idx) => (
-                  <span
-                    className="skill-tag"
-                    style={{ "--tag-delay": `${idx * 80}ms` }}
-                    key={skill}
-                  >
-                    <span className={`mini-icon ${type}`}></span>
-                    {skill}
-                  </span>
-                ))}
+                {group.skills.map((skillName, idx) => {
+                  const techInfo = techIconMap[skillName] || {
+                    icon: CodeIcon,
+                    color: "#aeb8cc",
+                    class: "skill-default",
+                  };
+                  const TechIcon = techInfo.icon;
+
+                  return (
+                    <div
+                      className={`skill-chip ${techInfo.class}`}
+                      style={{ "--tag-delay": `${idx * 80}ms` }}
+                      key={skillName}
+                    >
+                      <TechIcon
+                        className="skill-brand-icon"
+                        style={{ color: techInfo.color }}
+                        size={18}
+                      />
+                      <span>{skillName}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );

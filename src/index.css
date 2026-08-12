@@ -1584,7 +1584,7 @@ body::after {
 .sidebar-link-github:hover { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 16px rgba(255, 255, 255, 0.2); }
 .sidebar-link-linkedin:hover { border-color: rgba(10, 102, 194, 0.8); box-shadow: 0 0 18px rgba(10, 102, 194, 0.35); }
 .sidebar-link-leetcode:hover { border-color: rgba(249, 115, 22, 0.8); box-shadow: 0 0 18px rgba(249, 115, 22, 0.35); }
-.sidebar-link-gfg:hover { border-color: rgba(34, 197, 94, 0.8); box-shadow: 0 0 18px rgba(34, 197, 94, 0.35); }
+.sidebar-link-gfg:hover { border-color: rgba(47, 141, 70, 0.85); box-shadow: 0 0 25px rgba(47, 141, 70, 0.35); color: #2F8D46; }
 .sidebar-link-email:hover { border-color: rgba(236, 72, 153, 0.8); box-shadow: 0 0 18px rgba(236, 72, 153, 0.35); }
 .sidebar-link-user:hover { border-color: rgba(6, 182, 212, 0.8); box-shadow: 0 0 18px rgba(6, 182, 212, 0.35); }
 .sidebar-link-resume:hover { border-color: rgba(139, 92, 246, 0.8); box-shadow: 0 0 18px rgba(139, 92, 246, 0.35); }
@@ -1833,48 +1833,60 @@ body::before {
   gap: 9px;
 }
 
-.skill-tag {
+/* ---------- SKILL CHIPS & BRAND LOGOS ---------- */
+
+.skill-chip {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 11px;
+  gap: 8px;
+  padding: 8px 12px;
   border-radius: 9px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.025);
   color: #aeb8cc;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: default;
   transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.skill-tag:hover {
-  transform: translateY(-4px);
+.skill-chip:hover {
+  transform: translateY(-3px);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.skill-orange:hover { border-color: rgba(249, 115, 22, 0.45); box-shadow: 0 15px 45px rgba(249, 115, 22, 0.1); }
-.skill-cyan:hover { border-color: rgba(6, 182, 212, 0.45); box-shadow: 0 15px 45px rgba(6, 182, 212, 0.1); }
-.skill-green:hover { border-color: rgba(34, 197, 94, 0.45); box-shadow: 0 15px 45px rgba(34, 197, 94, 0.1); }
-.skill-blue:hover { border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 15px 45px rgba(59, 130, 246, 0.1); }
-.skill-purple:hover { border-color: rgba(139, 92, 246, 0.45); box-shadow: 0 15px 45px rgba(139, 92, 246, 0.1); }
-.skill-pink:hover { border-color: rgba(236, 72, 153, 0.45); box-shadow: 0 15px 45px rgba(236, 72, 153, 0.1); }
-
-/* ---------- MINI TECH ICONS ---------- */
-
-.mini-icon {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+.skill-brand-icon {
   flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
-.java { background: #f97316; box-shadow: 0 0 9px rgba(249, 115, 22, 0.8); }
-.javascript { background: #facc15; box-shadow: 0 0 9px rgba(250, 204, 21, 0.7); }
-.python { background: #3b82f6; box-shadow: 0 0 9px rgba(59, 130, 246, 0.7); }
-.sql, .react { background: #06b6d4; box-shadow: 0 0 9px rgba(6, 182, 212, 0.7); }
-.node, .mongodb, .supabase { background: #22c55e; box-shadow: 0 0 9px rgba(34, 197, 94, 0.7); }
-.github, .vercel { background: #ffffff; box-shadow: 0 0 9px rgba(255, 255, 255, 0.5); }
-.ai, .llm { background: #ec4899; box-shadow: 0 0 9px rgba(236, 72, 153, 0.7); }
+.skill-chip:hover .skill-brand-icon {
+  transform: scale(1.15);
+}
+
+/* Individual Brand Glow Shadows on Hover */
+.skill-java:hover { border-color: rgba(237, 139, 0, 0.5); box-shadow: 0 0 16px rgba(237, 139, 0, 0.3); }
+.skill-javascript:hover { border-color: rgba(247, 223, 30, 0.5); box-shadow: 0 0 16px rgba(247, 223, 30, 0.3); }
+.skill-python:hover { border-color: rgba(55, 118, 171, 0.5); box-shadow: 0 0 16px rgba(55, 118, 171, 0.3); }
+.skill-sql:hover, .skill-mysql:hover { border-color: rgba(68, 121, 161, 0.5); box-shadow: 0 0 16px rgba(68, 121, 161, 0.3); }
+.skill-html:hover { border-color: rgba(227, 79, 38, 0.5); box-shadow: 0 0 16px rgba(227, 79, 38, 0.3); }
+.skill-css:hover { border-color: rgba(21, 114, 182, 0.5); box-shadow: 0 0 16px rgba(21, 114, 182, 0.3); }
+.skill-react:hover { border-color: rgba(97, 218, 251, 0.5); box-shadow: 0 0 16px rgba(97, 218, 251, 0.3); }
+.skill-vite:hover { border-color: rgba(100, 108, 255, 0.5); box-shadow: 0 0 16px rgba(100, 108, 255, 0.3); }
+.skill-node:hover { border-color: rgba(51, 153, 51, 0.5); box-shadow: 0 0 16px rgba(51, 153, 51, 0.3); }
+.skill-express:hover { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 16px rgba(255, 255, 255, 0.3); }
+.skill-api:hover { border-color: rgba(6, 182, 212, 0.5); box-shadow: 0 0 16px rgba(6, 182, 212, 0.3); }
+.skill-mongodb:hover { border-color: rgba(71, 162, 72, 0.5); box-shadow: 0 0 16px rgba(71, 162, 72, 0.3); }
+.skill-postgres:hover { border-color: rgba(65, 105, 225, 0.5); box-shadow: 0 0 16px rgba(65, 105, 225, 0.3); }
+.skill-supabase:hover { border-color: rgba(62, 207, 142, 0.5); box-shadow: 0 0 16px rgba(62, 207, 142, 0.3); }
+.skill-git:hover { border-color: rgba(240, 80, 50, 0.5); box-shadow: 0 0 16px rgba(240, 80, 50, 0.3); }
+.skill-github:hover, .skill-vercel:hover { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 16px rgba(255, 255, 255, 0.3); }
+.skill-netlify:hover { border-color: rgba(0, 199, 183, 0.5); box-shadow: 0 0 16px rgba(0, 199, 183, 0.3); }
+.skill-openai:hover { border-color: rgba(16, 163, 127, 0.5); box-shadow: 0 0 16px rgba(16, 163, 127, 0.3); }
+.skill-llm:hover { border-color: rgba(236, 72, 153, 0.5); box-shadow: 0 0 16px rgba(236, 72, 153, 0.3); }
+.skill-tensorflow:hover { border-color: rgba(255, 111, 0, 0.5); box-shadow: 0 0 16px rgba(255, 111, 0, 0.3); }
+.skill-cicd:hover { border-color: rgba(139, 92, 246, 0.5); box-shadow: 0 0 16px rgba(139, 92, 246, 0.3); }
+
 
 /* ---------- PROJECT HOVER ---------- */
 

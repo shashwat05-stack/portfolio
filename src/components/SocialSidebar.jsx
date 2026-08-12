@@ -1,56 +1,34 @@
 import {
-  GithubIcon,
-  LinkedinIcon,
-  LeetCodeIcon,
-  GfgIcon,
+  SiGithub,
+  SiGeeksforgeeks,
+} from "react-icons/si";
+import {
   MailIcon,
   DownloadIcon,
-  UserIcon,
+  CodeIcon,
 } from "./Icons";
 
 const SocialSidebar = () => {
   const links = [
     {
-      name: "About Me",
-      icon: UserIcon,
-      href: "#about",
-      class: "sidebar-link-user",
-      external: false,
-    },
-    {
-      name: "Resume",
-      icon: DownloadIcon,
-      href: "/Shashwat-Gupta-Resume.pdf",
-      download: "Shashwat-Gupta-Resume.pdf",
-      class: "sidebar-link-resume",
-      external: true,
-    },
-    {
       name: "GitHub",
-      icon: GithubIcon,
+      icon: SiGithub,
       href: "https://github.com/shashwat05-stack",
       class: "sidebar-link-github",
       external: true,
     },
     {
-      name: "LinkedIn",
-      icon: LinkedinIcon,
-      href: "https://www.linkedin.com/in/shashwat-g-9438a0247/",
-      class: "sidebar-link-linkedin",
+      name: "GeeksforGeeks",
+      icon: SiGeeksforgeeks,
+      href: "https://www.geeksforgeeks.org/profile/shashwatg7cp5",
+      class: "sidebar-link-gfg",
       external: true,
     },
     {
       name: "LeetCode",
-      icon: LeetCodeIcon,
+      icon: CodeIcon,
       href: "https://leetcode.com/u/p2lSQfqYKV/",
       class: "sidebar-link-leetcode",
-      external: true,
-    },
-    {
-      name: "GeeksforGeeks",
-      icon: GfgIcon,
-      href: "https://www.geeksforgeeks.org/profile/shashwatg7cp5",
-      class: "sidebar-link-gfg",
       external: true,
     },
     {
@@ -58,6 +36,14 @@ const SocialSidebar = () => {
       icon: MailIcon,
       href: "mailto:shashwatgupta205@gmail.com",
       class: "sidebar-link-email",
+      external: true,
+    },
+    {
+      name: "Resume",
+      icon: DownloadIcon,
+      href: "/Shashwat-Gupta-Resume.pdf",
+      download: "Shashwat-Gupta-Resume.pdf",
+      class: "sidebar-link-resume",
       external: true,
     },
   ];
