@@ -52,12 +52,7 @@ const About = () => {
           </p>
 
           <div className="connect-button-wrapper">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com&su=Portfolio%20Contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="connect-button"
-            >
+            <a href="#contact" className="connect-button">
               Let's Connect <span>→</span>
             </a>
           </div>
