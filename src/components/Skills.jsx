@@ -1,8 +1,17 @@
+import {
+  CodeIcon,
+  MonitorIcon,
+  ServerIcon,
+  DatabaseIcon,
+  WrenchIcon,
+  BrainIcon,
+} from "./Icons";
+
 const skillGroups = [
   {
     number: "01",
     title: "Programming",
-    icon: "⌘",
+    icon: CodeIcon,
     color: "orange",
     skills: [
       ["Java", "java"],
@@ -14,7 +23,7 @@ const skillGroups = [
   {
     number: "02",
     title: "Frontend",
-    icon: "◈",
+    icon: MonitorIcon,
     color: "cyan",
     skills: [
       ["HTML", "html"],
@@ -26,7 +35,7 @@ const skillGroups = [
   {
     number: "03",
     title: "Backend",
-    icon: "⌁",
+    icon: ServerIcon,
     color: "green",
     skills: [
       ["Node.js", "node"],
@@ -37,7 +46,7 @@ const skillGroups = [
   {
     number: "04",
     title: "Databases",
-    icon: "◉",
+    icon: DatabaseIcon,
     color: "blue",
     skills: [
       ["MongoDB", "mongodb"],
@@ -49,7 +58,7 @@ const skillGroups = [
   {
     number: "05",
     title: "Tools & Deployment",
-    icon: "⚡",
+    icon: WrenchIcon,
     color: "purple",
     skills: [
       ["Git", "git"],
@@ -61,7 +70,7 @@ const skillGroups = [
   {
     number: "06",
     title: "AI & Other",
-    icon: "✦",
+    icon: BrainIcon,
     color: "pink",
     skills: [
       ["OpenAI APIs", "ai"],
@@ -76,7 +85,7 @@ const Skills = () => {
   return (
     <section className="section skills-section" id="skills">
       <div className="section-heading center-heading reveal">
-        <p>MY TOOLKIT</p>
+        <p className="gradient-label">MY TOOLKIT</p>
 
         <h2>Skills & Technologies</h2>
 
@@ -86,34 +95,39 @@ const Skills = () => {
       </div>
 
       <div className="skills-grid">
-        {skillGroups.map((group, index) => (
-          <div
-            className={`skill-card skill-${group.color} reveal`}
-            style={{ "--delay": `${index * 80}ms` }}
-            key={group.title}
-          >
-            <div className="skill-top">
-              <div className="skill-icon">{group.icon}</div>
+        {skillGroups.map((group, index) => {
+          const Icon = group.icon;
+          return (
+            <div
+              className={`skill-card skill-${group.color} reveal`}
+              style={{ "--delay": `${index * 80}ms` }}
+              key={group.title}
+            >
+              <div className="skill-top">
+                <div className={`skill-icon skill-icon-${group.color}`}>
+                  <Icon size={22} />
+                </div>
 
-              <span className="skill-number">{group.number}</span>
+                <span className="skill-number">{group.number}</span>
+              </div>
+
+              <h3>{group.title}</h3>
+
+              <div className="skill-tags">
+                {group.skills.map(([skill, type], idx) => (
+                  <span
+                    className="skill-tag"
+                    style={{ "--tag-delay": `${idx * 80}ms` }}
+                    key={skill}
+                  >
+                    <span className={`mini-icon ${type}`}></span>
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-
-            <h3>{group.title}</h3>
-
-            <div className="skill-tags">
-              {group.skills.map(([skill, type], index) => (
-                <span
-                  className="skill-tag"
-                  style={{ "--tag-delay": `${index * 80}ms` }}
-                  key={skill}
-                >
-                  <span className={`mini-icon ${type}`}></span>
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

@@ -1,12 +1,20 @@
+import {
+  GithubIcon,
+  LinkedinIcon,
+  LeetCodeIcon,
+  GfgIcon,
+  FileTextIcon,
+  ArrowUpRightIcon,
+} from "./Icons";
+
 const Hero = () => {
   return (
-    <section className="hero section" id="home">
+    <section className="hero section reveal" id="home">
       <div className="hero-content">
         <p className="hero-hello">Hello, I'm</p>
 
-        <h1>
-          Shashwat
-          <span> Gupta</span>
+        <h1 className="hero-name">
+          Shashwat <span className="gradient-text">Gupta</span>
         </h1>
 
         <h2>
@@ -21,16 +29,16 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <a href="#projects" className="primary-btn">
-            Explore Projects <span>↗</span>
+            Explore Projects <ArrowUpRightIcon size={18} />
           </a>
 
           <a
             href="/Shashwat-Gupta-Resume.pdf"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="outline-btn"
           >
-            View Resume
+            <FileTextIcon size={18} /> View Resume
           </a>
         </div>
 
@@ -38,37 +46,45 @@ const Hero = () => {
           <a
             href="https://github.com/shashwat05-stack"
             target="_blank"
-            rel="noreferrer"
-            className="social-link-github"
+            rel="noopener noreferrer"
+            className="social-icon-btn github-btn"
+            aria-label="GitHub"
+            title="GitHub"
           >
-            GitHub ↗
+            <GithubIcon size={20} />
           </a>
 
           <a
             href="https://www.linkedin.com/in/shashwat-g-9438a0247/"
             target="_blank"
-            rel="noreferrer"
-            className="social-link-linkedin"
+            rel="noopener noreferrer"
+            className="social-icon-btn linkedin-btn"
+            aria-label="LinkedIn"
+            title="LinkedIn"
           >
-            LinkedIn ↗
+            <LinkedinIcon size={20} />
           </a>
 
           <a
             href="https://leetcode.com/u/p2lSQfqYKV/"
             target="_blank"
-            rel="noreferrer"
-            className="social-link-leetcode"
+            rel="noopener noreferrer"
+            className="social-icon-btn leetcode-btn"
+            aria-label="LeetCode"
+            title="LeetCode"
           >
-            LeetCode ↗
+            <LeetCodeIcon size={20} />
           </a>
 
           <a
             href="https://www.geeksforgeeks.org/profile/shashwatg7cp5"
             target="_blank"
-            rel="noreferrer"
-            className="social-link-gfg"
+            rel="noopener noreferrer"
+            className="social-icon-btn gfg-btn"
+            aria-label="GeeksforGeeks"
+            title="GeeksforGeeks"
           >
-            GeeksforGeeks ↗
+            <GfgIcon size={20} />
           </a>
         </div>
       </div>

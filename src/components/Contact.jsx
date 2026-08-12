@@ -1,4 +1,12 @@
 import { useState } from "react";
+import {
+  MailIcon,
+  GithubIcon,
+  LinkedinIcon,
+  LeetCodeIcon,
+  GfgIcon,
+  SendIcon,
+} from "./Icons";
 
 // =========================================================================
 // REPLACE 'YOUR_FORMSPREE_ENDPOINT' WITH YOUR ACTUAL FORMSPREE ENDPOINT URL
@@ -56,12 +64,11 @@ const Contact = () => {
 
   return (
     <section className="section contact-section" id="contact">
-      <div className="contact-top">
-        <p>GET IN TOUCH</p>
+      <div className="section-heading center-heading reveal">
+        <p className="gradient-label">GET IN TOUCH</p>
 
         <h2>
-          Let's build something
-          <span> awesome.</span>
+          Let's build something <span className="gradient-text">awesome.</span>
         </h2>
 
         <p className="contact-description">
@@ -83,12 +90,14 @@ const Contact = () => {
 
           <div className="contact-items">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+              href="mailto:shashwatgupta205@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link"
+              className="contact-link contact-item-email"
             >
-              <span>✉</span>
+              <span className="contact-item-icon">
+                <MailIcon size={18} />
+              </span>
 
               <div>
                 <small className="contact-label">EMAIL</small>
@@ -99,9 +108,12 @@ const Contact = () => {
             <a
               href="https://github.com/shashwat05-stack"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="contact-link contact-item-github"
             >
-              <span>{"</>"}</span>
+              <span className="contact-item-icon">
+                <GithubIcon size={18} />
+              </span>
 
               <div>
                 <small>GITHUB</small>
@@ -112,9 +124,12 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/shashwat-g-9438a0247/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="contact-link contact-item-linkedin"
             >
-              <span>in</span>
+              <span className="contact-item-icon">
+                <LinkedinIcon size={18} />
+              </span>
 
               <div>
                 <small>LINKEDIN</small>
@@ -131,36 +146,53 @@ const Contact = () => {
                 href="https://github.com/shashwat05-stack"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link social-link-github"
+                className="social-link github-link"
+                aria-label="GitHub"
+                title="GitHub"
               >
-                GitHub ↗
+                <GithubIcon size={20} />
               </a>
 
               <a
                 href="https://www.linkedin.com/in/shashwat-g-9438a0247/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link social-link-linkedin"
+                className="social-link linkedin-link"
+                aria-label="LinkedIn"
+                title="LinkedIn"
               >
-                LinkedIn ↗
+                <LinkedinIcon size={20} />
+              </a>
+
+              <a
+                href="mailto:shashwatgupta205@gmail.com"
+                className="social-link email-link"
+                aria-label="Email"
+                title="Email"
+              >
+                <MailIcon size={20} />
               </a>
 
               <a
                 href="https://leetcode.com/u/p2lSQfqYKV/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link social-link-leetcode"
+                className="social-link leetcode-link"
+                aria-label="LeetCode"
+                title="LeetCode"
               >
-                LeetCode ↗
+                <LeetCodeIcon size={20} />
               </a>
 
               <a
                 href="https://www.geeksforgeeks.org/profile/shashwatg7cp5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link social-link-gfg"
+                className="social-link gfg-link"
+                aria-label="GeeksforGeeks"
+                title="GeeksforGeeks"
               >
-                GeeksforGeeks ↗
+                <GfgIcon size={20} />
               </a>
             </div>
           </div>
@@ -247,16 +279,20 @@ const Contact = () => {
                 disabled={status === "submitting"}
                 className="primary-btn submit-btn"
               >
-                {status === "submitting" ? "Sending..." : "Send Message ↗"}
+                {status === "submitting" ? (
+                  "Sending..."
+                ) : (
+                  <>
+                    Send Message <SendIcon size={16} />
+                  </>
+                )}
               </button>
 
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:shashwatgupta205@gmail.com"
                 className="outline-btn direct-email-btn"
               >
-                Send an Email ↗
+                <MailIcon size={16} /> Direct Email
               </a>
             </div>
           </form>
@@ -267,4 +303,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

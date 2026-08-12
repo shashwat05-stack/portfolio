@@ -1,9 +1,13 @@
+import { ExternalLinkIcon, DownloadIcon, FileTextIcon } from "./Icons";
+
 const Resume = () => {
   return (
     <section className="resume-section">
       <div className="resume-box reveal">
-        <div>
-          <p className="small-label">MY RESUME</p>
+        <div className="resume-info">
+          <div className="resume-badge">
+            <FileTextIcon size={14} /> MY RESUME
+          </div>
 
           <h2>Want to know more?</h2>
 
@@ -20,7 +24,7 @@ const Resume = () => {
             rel="noopener noreferrer"
             className="resume-btn primary primary-btn"
           >
-            View Resume ↗
+            View Resume <ExternalLinkIcon size={16} />
           </a>
 
           <a
@@ -28,7 +32,7 @@ const Resume = () => {
             download="Shashwat-Gupta-Resume.pdf"
             className="resume-btn secondary outline-btn"
           >
-            Download ↓
+            <DownloadIcon size={16} /> Download
           </a>
         </div>
       </div>

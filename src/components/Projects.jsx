@@ -1,6 +1,12 @@
 import weatherImg from "../assets/weather.png";
 import movieImg from "../assets/movies.png";
 import spendwiseImg from "../assets/spendwise.png";
+import {
+  ExternalLinkIcon,
+  GithubIcon,
+  SparklesIcon,
+  ArrowRightIcon,
+} from "./Icons";
 
 const projects = [
   {
@@ -63,7 +69,7 @@ const Projects = () => {
   return (
     <section className="section projects-section" id="projects">
       <div className="section-heading center-heading reveal">
-        <p>SELECTED WORK</p>
+        <p className="gradient-label">SELECTED WORK</p>
         <h2>Featured Projects</h2>
         <span>
           A collection of applications I've designed and developed.
@@ -94,17 +100,20 @@ const Projects = () => {
               <a
                 href={project.live}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="image-live-btn"
               >
-                View Live ↗
+                View Live <ExternalLinkIcon size={14} />
               </a>
             </div>
 
             <div className="project-info">
-              <span className="project-number">{project.number}</span>
-
-              <p className="project-label">FEATURED PROJECT</p>
+              <div className="project-header-meta">
+                <span className="project-number">{project.number}</span>
+                <span className="featured-badge">
+                  <SparklesIcon size={12} /> Featured Project
+                </span>
+              </div>
 
               <h3>{project.title}</h3>
 
@@ -124,19 +133,19 @@ const Projects = () => {
                 <a
                   href={project.live}
                   target="_blank"
-                  rel="noreferrer"
-                  className="primary-btn"
+                  rel="noopener noreferrer"
+                  className="primary-btn project-live-demo-btn"
                 >
-                  Live Demo ↗
+                  Live Demo <ExternalLinkIcon size={16} />
                 </a>
 
                 <a
                   href={project.github}
                   target="_blank"
-                  rel="noreferrer"
-                  className="outline-btn"
+                  rel="noopener noreferrer"
+                  className="outline-btn project-github-btn"
                 >
-                  GitHub ↗
+                  <GithubIcon size={16} /> GitHub
                 </a>
               </div>
             </div>
@@ -144,16 +153,16 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="github-more">
+      <div className="github-more reveal">
         <p>Want to see more of my work?</p>
 
         <a
           href="https://github.com/shashwat05-stack"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="text-link"
         >
-          Explore my GitHub →
+          Explore my GitHub <ArrowRightIcon size={16} />
         </a>
       </div>
     </section>
