@@ -1,32 +1,30 @@
 import {
-  SiGithub,
-  SiGeeksforgeeks,
-} from "react-icons/si";
-import {
+  GithubIcon,
+  GfgIcon,
+  LeetCodeIcon,
   MailIcon,
   DownloadIcon,
-  CodeIcon,
 } from "./Icons";
 
 const SocialSidebar = () => {
   const links = [
     {
       name: "GitHub",
-      icon: SiGithub,
+      icon: GithubIcon,
       href: "https://github.com/shashwat05-stack",
       class: "sidebar-link-github",
       external: true,
     },
     {
       name: "GeeksforGeeks",
-      icon: SiGeeksforgeeks,
+      icon: GfgIcon,
       href: "https://www.geeksforgeeks.org/profile/shashwatg7cp5",
       class: "sidebar-link-gfg",
       external: true,
     },
     {
       name: "LeetCode",
-      icon: CodeIcon,
+      icon: LeetCodeIcon,
       href: "https://leetcode.com/u/p2lSQfqYKV/",
       class: "sidebar-link-leetcode",
       external: true,
