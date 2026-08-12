@@ -12,7 +12,7 @@ import {
 // REPLACE 'YOUR_FORMSPREE_ENDPOINT' WITH YOUR ACTUAL FORMSPREE ENDPOINT URL
 // Example: "https://formspree.io/f/xzy... "
 // =========================================================================
-const FORMSPREE_ENDPOINT = "YOUR_FORMSPREE_ENDPOINT";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpzkklr";
 
 const Contact = () => {
   const [status, setStatus] = useState(null); // null | 'submitting' | 'success' | 'error'
