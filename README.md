@@ -1,16 +1,214 @@
-# React + Vite
+# 🌐 Shashwat Gupta — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> A modern, responsive developer portfolio showcasing my projects, technical skills, coding journey, and professional profiles.
 
-Currently, two official plugins are available:
+## 🔗 Live Portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🚀 **Portfolio:** [View Live Portfolio](YOUR_PORTFOLIO_LINK)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 About Me
 
-## Expanding the Oxlint configuration
+Hi, I'm **Shashwat Gupta**, a Computer Science & Engineering student and aspiring software developer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+I enjoy building modern web applications, solving programming problems, and learning new technologies.
+
+Currently, I'm focusing on:
+
+- 💻 Web Development
+- ☕ Java
+- 🧩 Data Structures & Algorithms
+- ⚛️ React
+- 🌐 JavaScript
+- 🔌 APIs
+- 🗄️ Backend & Database Technologies
+- 🧠 Problem Solving
+
+My goal is to become a strong software developer by continuously learning, building meaningful projects, and solving real-world problems.
+
+---
+
+## ✨ Portfolio Features
+
+- 🎨 Modern dark-themed UI
+- 🧊 Apple-inspired glassmorphism design
+- 📱 Responsive design
+- 🏠 Interactive hero section
+- 👨‍💻 About Me section
+- 🛠️ Skills & Technologies
+- 🚀 Featured Projects
+- 📄 Resume section
+- 📬 Contact section
+- 🔗 GitHub & LinkedIn integration
+- 🧩 LeetCode profile
+- 💻 GeeksforGeeks profile
+- ✨ Smooth animations and hover effects
+- 🌌 Subtle animated background effects
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Vite
+
+### Programming & Problem Solving
+
+- Java
+- Data Structures & Algorithms
+- LeetCode
+- GeeksforGeeks
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+- Netlify
+
+---
+
+# 🚀 Featured Projects
+
+## 🌦️ Weather App
+
+A responsive weather application that provides weather information using an external weather API.
+
+**Features:**
+
+- 🌡️ Current weather information
+- 📍 Location-based weather search
+- 🌤️ Weather conditions
+- 📱 Responsive interface
+- 🔌 API integration
+
+**Tech:** React, JavaScript, CSS, Weather API
+
+🔗 [GitHub Repository](https://github.com/shashwat05-stack/Weather-App)
+
+🌐 [Live Demo](https://shashwatstack-weather-app.netlify.app/)
+
+---
+
+## 🎬 Movie Finder
+
+A movie discovery application that allows users to search for movies and explore movie information using an external API.
+
+**Features:**
+
+- 🔎 Movie search
+- 🎬 Movie information
+- ⭐ Ratings
+- 🖼️ Movie posters
+- 📱 Responsive UI
+- 🔌 API integration
+
+**Tech:** React, JavaScript, CSS, Movie API
+
+🔗 [GitHub Repository](https://github.com/shashwat05-stack/Movie-Finder)
+
+🌐 [Live Demo](https://shashwatstack-moviesphere.netlify.app/)
+
+---
+
+## 💰 SpendWise — Personal Expense Tracker
+
+A personal finance web application designed to help users track and manage their expenses.
+
+**Features:**
+
+- 💵 Add expenses
+- 📊 Track spending
+- 📋 Expense management
+- 📱 Responsive design
+- 🎨 Clean and modern interface
+
+**Tech:** React, JavaScript, CSS
+
+🔗 [GitHub Repository](https://github.com/shashwat05-stack/personal-expense-tracker)
+
+🌐 [Live Demo](https://spendwise-personalexpensetracker.netlify.app/)
+
+---
+
+# 🧠 Coding Profiles
+
+### LeetCode
+
+🔗 [View my LeetCode Profile](https://leetcode.com/u/p2lSQfqYKV/)
+
+### GeeksforGeeks
+
+🔗 [View my GeeksforGeeks Profile](https://www.geeksforgeeks.org/profile/shashwatg7cp5)
+
+---
+
+# 🔗 Connect With Me
+
+### GitHub
+
+[github.com/shashwat05-stack](https://github.com/shashwat05-stack)
+
+### LinkedIn
+
+[linkedin.com/in/shashwat-g-9438a0247](https://www.linkedin.com/in/shashwat-g-9438a0247/)
+
+### Email
+
+📧 **shashwatgupta205@gmail.com**
+
+---
+
+# 📄 Resume
+
+You can view/download my resume directly from my portfolio.
+
+👉 **[View Resume](YOUR_PORTFOLIO_LINK)**
+
+---
+
+# 📸 Portfolio Preview
+
+### Home
+
+![Portfolio Home](screenshots/home.png)
+
+### About & Skills
+
+![About and Skills](screenshots/about-skills.png)
+
+### Projects
+
+![Projects](screenshots/projects.png)
+
+### Contact
+
+![Contact](screenshots/contact.png)
+
+---
+
+# 📂 Project Structure
+
+```text
+portfolio/
+│
+├── public/
+│   ├── resume.pdf
+│   └── assets/
+│
+├── src/
+│   ├── components/
+│   ├── sections/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+├── vite.config.js
+└── README.md
