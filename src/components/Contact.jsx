@@ -131,7 +131,7 @@ const Contact = () => {
                 href="https://github.com/shashwat05-stack"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link"
+                className="social-link social-link-github"
               >
                 GitHub ↗
               </a>
@@ -140,7 +140,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/shashwat-g-9438a0247/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link"
+                className="social-link social-link-linkedin"
               >
                 LinkedIn ↗
               </a>
@@ -149,7 +149,7 @@ const Contact = () => {
                 href="https://leetcode.com/u/p2lSQfqYKV/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link"
+                className="social-link social-link-leetcode"
               >
                 LeetCode ↗
               </a>
@@ -158,7 +158,7 @@ const Contact = () => {
                 href="https://www.geeksforgeeks.org/profile/shashwatg7cp5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-link"
+                className="social-link social-link-gfg"
               >
                 GeeksforGeeks ↗
               </a>

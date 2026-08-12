@@ -71,13 +71,20 @@ const Projects = () => {
       </div>
 
       <div className="projects-list">
-        {projects.map((project, index) => (
-          <article
-            className={`project-row ${
-              index % 2 !== 0 ? "project-reverse" : ""
-            }`}
-            key={project.title}
-          >
+        {projects.map((project, index) => {
+          const projectSlug = project.title.toLowerCase().includes("weather")
+            ? "project-weather"
+            : project.title.toLowerCase().includes("movie")
+            ? "project-moviesphere"
+            : "project-spendwise";
+
+          return (
+            <article
+              className={`project-row ${projectSlug} ${
+                index % 2 !== 0 ? "project-reverse" : ""
+              }`}
+              key={project.title}
+            >
             <div className="project-image">
               <div className="browser-bar">
                 <div>
@@ -141,7 +148,8 @@ const Projects = () => {
               </div>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
 
       <div className="github-more">

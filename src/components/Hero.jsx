@@ -39,6 +39,7 @@ const Hero = () => {
             href="https://github.com/shashwat05-stack"
             target="_blank"
             rel="noreferrer"
+            className="social-link-github"
           >
             GitHub ↗
           </a>
@@ -47,6 +48,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/shashwat-g-9438a0247/"
             target="_blank"
             rel="noreferrer"
+            className="social-link-linkedin"
           >
             LinkedIn ↗
           </a>
@@ -55,6 +57,7 @@ const Hero = () => {
             href="https://leetcode.com/u/p2lSQfqYKV/"
             target="_blank"
             rel="noreferrer"
+            className="social-link-leetcode"
           >
             LeetCode ↗
           </a>
@@ -63,6 +66,7 @@ const Hero = () => {
             href="https://www.geeksforgeeks.org/profile/shashwatg7cp5"
             target="_blank"
             rel="noreferrer"
+            className="social-link-gfg"
           >
             GeeksforGeeks ↗
           </a>

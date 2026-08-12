@@ -36,6 +36,22 @@ const skillGroups = [
   },
 ];
 
+const getSkillClass = (skillName) => {
+  const normalized = skillName.toLowerCase();
+  if (normalized.includes("java") && !normalized.includes("script")) return "tag-java";
+  if (normalized.includes("javascript") || normalized.includes("js")) return "tag-javascript";
+  if (normalized.includes("react")) return "tag-react";
+  if (normalized.includes("python")) return "tag-python";
+  if (normalized.includes("node")) return "tag-node";
+  if (normalized.includes("mongo")) return "tag-mongodb";
+  if (normalized.includes("aws")) return "tag-aws";
+  if (normalized.includes("github")) return "tag-github";
+  if (normalized.includes("sql") || normalized.includes("postgres")) return "tag-sql";
+  if (normalized.includes("html") || normalized.includes("css")) return "tag-htmlcss";
+  if (normalized.includes("ai") || normalized.includes("llm") || normalized.includes("tensor")) return "tag-ai";
+  return "tag-default";
+};
+
 const Skills = () => {
   return (
     <section className="section skills-section" id="skills">
@@ -57,7 +73,9 @@ const Skills = () => {
 
             <div className="skill-tags">
               {group.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
+                <span key={skill} className={`skill-tag ${getSkillClass(skill)}`}>
+                  {skill}
+                </span>
               ))}
             </div>
           </div>

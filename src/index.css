@@ -1516,5 +1516,161 @@ body::after {
   font-size: 13px;
 }
 
+/* ==========================================
+   MULTI-COLOR ACCENT & INTERACTIVE GLOW SYSTEM
+   ========================================== */
+
+/* NAVBAR ACTIVE UNDERLINE */
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #4f8cff, #925cff);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(146, 92, 255, 0.6);
+}
+
+/* BACKGROUND BLOBS & GRID TEXTURE */
+.bg-glow-4 {
+  background: #ec4899;
+  bottom: 5%;
+  right: 10%;
+  animation-delay: -9s;
+}
+
+.bg-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* SKILL BADGES INDIVIDUAL COLOR ACCENTS */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+}
+
+.skill-tag.tag-java:hover { color: #fdba74; border-color: rgba(249, 115, 22, 0.45); box-shadow: 0 0 12px rgba(249, 115, 22, 0.3); background: rgba(249, 115, 22, 0.08); }
+.skill-tag.tag-javascript:hover { color: #fef08a; border-color: rgba(234, 179, 8, 0.45); box-shadow: 0 0 12px rgba(234, 179, 8, 0.3); background: rgba(234, 179, 8, 0.08); }
+.skill-tag.tag-react:hover { color: #67e8f9; border-color: rgba(6, 182, 212, 0.45); box-shadow: 0 0 12px rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); }
+.skill-tag.tag-python:hover { color: #93c5fd; border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 0 12px rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.08); }
+.skill-tag.tag-node:hover { color: #86efac; border-color: rgba(34, 197, 94, 0.45); box-shadow: 0 0 12px rgba(34, 197, 94, 0.3); background: rgba(34, 197, 94, 0.08); }
+.skill-tag.tag-mongodb:hover { color: #6ee7b7; border-color: rgba(16, 185, 129, 0.45); box-shadow: 0 0 12px rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08); }
+.skill-tag.tag-aws:hover { color: #fdba74; border-color: rgba(249, 115, 22, 0.45); box-shadow: 0 0 12px rgba(249, 115, 22, 0.3); background: rgba(249, 115, 22, 0.08); }
+.skill-tag.tag-github:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.45); box-shadow: 0 0 12px rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.08); }
+.skill-tag.tag-sql:hover { color: #93c5fd; border-color: rgba(59, 130, 246, 0.45); box-shadow: 0 0 12px rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.08); }
+.skill-tag.tag-htmlcss:hover { color: #f472b6; border-color: rgba(244, 114, 182, 0.45); box-shadow: 0 0 12px rgba(244, 114, 182, 0.3); background: rgba(244, 114, 182, 0.08); }
+.skill-tag.tag-ai:hover { color: #f472b6; border-color: rgba(236, 72, 153, 0.45); box-shadow: 0 0 12px rgba(236, 72, 153, 0.3); background: rgba(236, 72, 153, 0.08); }
+
+/* PROJECT CARD INDIVIDUAL HOVER GLOWS & ZOOM */
+.project-row {
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-image {
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.project-image img {
+  transition: transform 0.5s ease;
+}
+
+.project-weather:hover .project-image {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 12px 35px -8px rgba(34, 211, 238, 0.35);
+  transform: translateY(-5px);
+}
+
+.project-moviesphere:hover .project-image {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 12px 35px -8px rgba(168, 85, 247, 0.35);
+  transform: translateY(-5px);
+}
+
+.project-spendwise:hover .project-image {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 12px 35px -8px rgba(16, 185, 129, 0.35);
+  transform: translateY(-5px);
+}
+
+.project-row:hover .project-image img {
+  transform: scale(1.04);
+}
+
+/* SOCIAL LINKS PLATFORM-SPECIFIC HOVER GLOWS */
+.social-link-github:hover,
+.hero-socials a.social-link-github:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.social-link-linkedin:hover,
+.hero-socials a.social-link-linkedin:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.social-link-leetcode:hover,
+.hero-socials a.social-link-leetcode:hover {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.35);
+  border-color: rgba(249, 115, 22, 0.5);
+  color: #fdba74;
+  background: rgba(249, 115, 22, 0.1);
+}
+
+.social-link-gfg:hover,
+.hero-socials a.social-link-gfg:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
+  border-color: rgba(34, 197, 94, 0.5);
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+/* SCROLL REVEAL ANIMATIONS */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 
