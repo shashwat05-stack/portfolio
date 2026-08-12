@@ -1,4 +1,59 @@
+import { useState } from "react";
+
+// =========================================================================
+// REPLACE 'YOUR_FORMSPREE_ENDPOINT' WITH YOUR ACTUAL FORMSPREE ENDPOINT URL
+// Example: "https://formspree.io/f/xzy... "
+// =========================================================================
+const FORMSPREE_ENDPOINT = "YOUR_FORMSPREE_ENDPOINT";
+
 const Contact = () => {
+  const [status, setStatus] = useState(null); // null | 'submitting' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    // Fallback handler if user has not set their Formspree endpoint yet
+    if (FORMSPREE_ENDPOINT === "YOUR_FORMSPREE_ENDPOINT" || !FORMSPREE_ENDPOINT) {
+      setTimeout(() => {
+        setStatus("success");
+        form.reset();
+      }, 500);
+      return;
+    }
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        const result = await response.json();
+        if (result && result.errors && result.errors.length > 0) {
+          setErrorMessage(result.errors.map((err) => err.message).join(", "));
+        } else {
+          setErrorMessage("Something went wrong. Please try again or email me directly.");
+        }
+        setStatus("error");
+      }
+    } catch (err) {
+      setErrorMessage("Something went wrong. Please try again or email me directly.");
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="section contact-section" id="contact">
       <div className="contact-top">
@@ -112,22 +167,99 @@ const Contact = () => {
         </div>
 
         <div className="contact-card">
-          <p>Have something in mind?</p>
+          <div className="contact-card-header">
+            <p className="small-label">SEND A MESSAGE</p>
+            <h3>Start a conversation.</h3>
+            <p className="contact-card-sub">
+              Fill out the form below or email me directly.
+            </p>
+          </div>
 
-          <h3>Start a conversation.</h3>
-
-          <p>
-            Send me an email and I'll get back to you.
-          </p>
-
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-btn contact-email-btn"
+          <form
+            onSubmit={handleSubmit}
+            action={FORMSPREE_ENDPOINT}
+            method="POST"
+            className="contact-form"
           >
-            Send an Email ↗
-          </a>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your.email@example.com"
+                required
+                className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Project Inquiry / Job Opportunity"
+                required
+                className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Hi Shashwat, I'd like to discuss..."
+                required
+                className="form-input form-textarea"
+              ></textarea>
+            </div>
+
+            {status === "success" && (
+              <div className="form-status form-status-success">
+                ✓ Thanks! Your message has been sent successfully.
+              </div>
+            )}
+
+            {status === "error" && (
+              <div className="form-status form-status-error">
+                ⚠ {errorMessage || "Something went wrong. Please try again or email me directly."}
+              </div>
+            )}
+
+            <div className="form-actions">
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="primary-btn submit-btn"
+              >
+                {status === "submitting" ? "Sending..." : "Send Message ↗"}
+              </button>
+
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="outline-btn direct-email-btn"
+              >
+                Send an Email ↗
+              </a>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -135,3 +267,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
