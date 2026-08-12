@@ -1,10 +1,10 @@
 # 🌐 Shashwat Gupta — Developer Portfolio
 
-> A modern, responsive developer portfolio showcasing my projects, technical skills, coding journey, and professional profiles.
+A modern, responsive developer portfolio built to showcase my projects, technical skills, education, coding profiles, and development journey.
 
-## 🔗 Live Portfolio
+## 🚀 Live Portfolio
 
-🚀 **Portfolio:** [View Live Portfolio](YOUR_PORTFOLIO_LINK)
+### [🌐 Visit My Portfolio](https://myportfolio-alpha-cyan-19.vercel.app/)
 
 ---
 
@@ -12,65 +12,70 @@
 
 Hi, I'm **Shashwat Gupta**, a Computer Science & Engineering student and aspiring software developer.
 
-I enjoy building modern web applications, solving programming problems, and learning new technologies.
+I enjoy building practical web applications, working with APIs, solving programming problems, and continuously learning modern development technologies.
 
 Currently, I'm focusing on:
 
-- 💻 Web Development
 - ☕ Java
 - 🧩 Data Structures & Algorithms
 - ⚛️ React
 - 🌐 JavaScript
+- 🎨 Frontend Development
 - 🔌 APIs
-- 🗄️ Backend & Database Technologies
-- 🧠 Problem Solving
+- 🗄️ Databases
+- 💻 Problem Solving
 
-My goal is to become a strong software developer by continuously learning, building meaningful projects, and solving real-world problems.
+My goal is to become a strong software developer by building meaningful projects and solving real-world problems.
 
 ---
 
-## ✨ Portfolio Features
+## ✨ Portfolio Highlights
 
-- 🎨 Modern dark-themed UI
+- 🎨 Modern dark developer-focused UI
 - 🧊 Apple-inspired glassmorphism design
-- 📱 Responsive design
-- 🏠 Interactive hero section
+- 📱 Fully responsive layout
+- ✨ Smooth animations and interactions
+- 🏠 Hero section with developer-themed code window
 - 👨‍💻 About Me section
 - 🛠️ Skills & Technologies
 - 🚀 Featured Projects
+- 🎓 Education section
 - 📄 Resume section
 - 📬 Contact section
 - 🔗 GitHub & LinkedIn integration
 - 🧩 LeetCode profile
 - 💻 GeeksforGeeks profile
-- ✨ Smooth animations and hover effects
-- 🌌 Subtle animated background effects
+- 🌌 Subtle ambient background effects
+- 🔗 Live project demonstrations
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 
-- HTML5
-- CSS3
-- JavaScript
-- React
-- Vite
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ### Programming & Problem Solving
 
-- Java
-- Data Structures & Algorithms
-- LeetCode
-- GeeksforGeeks
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![DSA](https://img.shields.io/badge/Data%20Structures%20%26%20Algorithms-007396?style=for-the-badge)
 
-### Tools
+### Databases & APIs
 
-- Git
-- GitHub
-- VS Code
-- Netlify
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20APIs-02569B?style=for-the-badge)
+
+### Tools & Deployment
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ---
 
@@ -78,129 +83,130 @@ My goal is to become a strong software developer by continuously learning, build
 
 ## 🌦️ Weather App
 
-A responsive weather application that provides weather information using an external weather API.
+A responsive weather application that provides real-time weather information using a weather API.
 
-**Features:**
+### Features
 
-- 🌡️ Current weather information
-- 📍 Location-based weather search
-- 🌤️ Weather conditions
-- 📱 Responsive interface
-- 🔌 API integration
+- 🌡️ Current temperature and weather conditions
+- 💧 Humidity information
+- 💨 Wind information
+- 📍 City-based weather search
+- 📱 Responsive design
+- 🔌 Weather API integration
 
-**Tech:** React, JavaScript, CSS, Weather API
+**Tech:** React.js · JavaScript · HTML · CSS · Weather API
 
-🔗 [GitHub Repository](https://github.com/shashwat05-stack/Weather-App)
-
-🌐 [Live Demo](https://shashwatstack-weather-app.netlify.app/)
+🔗 **[GitHub Repository](https://github.com/shashwat05-stack/Weather-App)**  
+🌐 **[Live Demo](https://shashwatstack-weather-app.netlify.app/)**
 
 ---
 
-## 🎬 Movie Finder
+## 🎬 MovieSphere
 
-A movie discovery application that allows users to search for movies and explore movie information using an external API.
+A movie discovery web application that allows users to search and explore movies using the TMDB API.
 
-**Features:**
+### Features
 
-- 🔎 Movie search
-- 🎬 Movie information
+- 🔎 Search movies
+- 🎬 Browse movie information
 - ⭐ Ratings
 - 🖼️ Movie posters
-- 📱 Responsive UI
-- 🔌 API integration
+- 📅 Release information
+- 📱 Responsive interface
+- 🔌 TMDB API integration
 
-**Tech:** React, JavaScript, CSS, Movie API
+**Tech:** React.js · JavaScript · HTML · CSS · TMDB API
 
-🔗 [GitHub Repository](https://github.com/shashwat05-stack/Movie-Finder)
-
-🌐 [Live Demo](https://shashwatstack-moviesphere.netlify.app/)
+🔗 **[GitHub Repository](https://github.com/shashwat05-stack/Movie-Finder)**  
+🌐 **[Live Demo](https://shashwatstack-moviesphere.netlify.app/)**
 
 ---
 
 ## 💰 SpendWise — Personal Expense Tracker
 
-A personal finance web application designed to help users track and manage their expenses.
+A personal expense tracking application designed to help users record, organize, and understand their daily spending.
 
-**Features:**
+### Features
 
-- 💵 Add expenses
-- 📊 Track spending
-- 📋 Expense management
-- 📱 Responsive design
-- 🎨 Clean and modern interface
+- 💵 Expense tracking
+- 📊 Spending overview
+- 📋 Transaction management
+- 🗂️ Expense categorization
+- 📱 Responsive interface
+- 🎨 Modern dashboard
 
-**Tech:** React, JavaScript, CSS
+**Tech:** React.js · JavaScript · CSS
 
-🔗 [GitHub Repository](https://github.com/shashwat05-stack/personal-expense-tracker)
-
-🌐 [Live Demo](https://spendwise-personalexpensetracker.netlify.app/)
+🔗 **[GitHub Repository](https://github.com/shashwat05-stack/personal-expense-tracker)**  
+🌐 **[Live Demo](https://spendwise-personalexpensetracker.netlify.app/)**
 
 ---
 
 # 🧠 Coding Profiles
 
+I'm actively improving my problem-solving and Data Structures & Algorithms skills.
+
 ### LeetCode
 
-🔗 [View my LeetCode Profile](https://leetcode.com/u/p2lSQfqYKV/)
+🔗 **[View My LeetCode Profile](https://leetcode.com/u/p2lSQfqYKV/)**
 
 ### GeeksforGeeks
 
-🔗 [View my GeeksforGeeks Profile](https://www.geeksforgeeks.org/profile/shashwatg7cp5)
+🔗 **[View My GeeksforGeeks Profile](https://www.geeksforgeeks.org/profile/shashwatg7cp5)**
 
 ---
 
-# 🔗 Connect With Me
+# 🎓 Education
 
-### GitHub
+### B.Tech / B.E. — Computer Science & Engineering
 
-[github.com/shashwat05-stack](https://github.com/shashwat05-stack)
+**Shri Shankaracharya Technical Campus, Bhilai**
 
-### LinkedIn
+**2024 — 2028**
 
-[linkedin.com/in/shashwat-g-9438a0247](https://www.linkedin.com/in/shashwat-g-9438a0247/)
+Currently building a strong foundation in:
 
-### Email
-
-📧 **shashwatgupta205@gmail.com**
+- Computer Science
+- Programming
+- Software Development
+- Databases
+- Data Structures & Algorithms
+- Problem Solving
 
 ---
 
 # 📄 Resume
 
-You can view/download my resume directly from my portfolio.
+For a detailed overview of my skills, projects, education, and experience:
 
-👉 **[View Resume](YOUR_PORTFOLIO_LINK)**
+👉 **[View My Resume](https://myportfolio-alpha-cyan-19.vercel.app/)**
 
 ---
 
 # 📸 Portfolio Preview
 
-### Home
+The portfolio includes:
 
-![Portfolio Home](screenshots/home.png)
+- 🏠 Home / Hero
+- 👨‍💻 About Me
+- 🛠️ Skills & Technologies
+- 🚀 Featured Projects
+- 🎓 Education
+- 📄 Resume
+- 📬 Contact
 
-### About & Skills
-
-![About and Skills](screenshots/about-skills.png)
-
-### Projects
-
-![Projects](screenshots/projects.png)
-
-### Contact
-
-![Contact](screenshots/contact.png)
+👉 **[Explore the Live Portfolio](https://myportfolio-alpha-cyan-19.vercel.app/)**
 
 ---
 
 # 📂 Project Structure
 
 ```text
-portfolio/
+my-portfolio/
 │
 ├── public/
 │   ├── resume.pdf
-│   └── assets/
+│   └── favicon.svg
 │
 ├── src/
 │   ├── components/
@@ -209,6 +215,7 @@ portfolio/
 │   ├── main.jsx
 │   └── index.css
 │
+├── index.html
 ├── package.json
 ├── vite.config.js
 └── README.md
