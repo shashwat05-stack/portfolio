@@ -51,14 +51,16 @@ const About = () => {
             technologies and AI-powered applications.
           </p>
 
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205@gmail.com&su=Portfolio%20Contact"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link"
-          >
-            Let's Connect →
-          </a>
+          <div className="connect-button-wrapper">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com&su=Portfolio%20Contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="connect-button"
+            >
+              Let's Connect <span>→</span>
+            </a>
+          </div>
         </div>
 
         <div className="about-cards">

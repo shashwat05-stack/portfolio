@@ -1369,3 +1369,45 @@ body::after {
   transform: translateY(-3px);
 }
 
+.connect-button-wrapper {
+  position: relative;
+  z-index: 20;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.connect-button {
+  position: relative;
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #91b6ff;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.connect-button:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.connect-button span {
+  transition: transform 0.25s ease;
+}
+
+.connect-button:hover span {
+  transform: translateX(4px);
+}
+
+
