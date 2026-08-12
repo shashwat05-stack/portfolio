@@ -90,7 +90,9 @@ const Contact = () => {
 
           <div className="contact-items">
             <a
-              href="mailto:shashwatgupta205@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="contact-link contact-item-email"
             >
               <span className="contact-item-icon">
@@ -163,7 +165,9 @@ const Contact = () => {
               </a>
 
               <a
-                href="mailto:shashwatgupta205@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-link email-link"
                 aria-label="Email"
                 title="Email"
@@ -287,7 +291,9 @@ const Contact = () => {
               </button>
 
               <a
-                href="mailto:shashwatgupta205@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="outline-btn direct-email-btn"
               >
                 <MailIcon size={16} /> Direct Email
