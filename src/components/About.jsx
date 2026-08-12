@@ -64,7 +64,10 @@ const About = () => {
           </p>
 
           <div className="connect-button-wrapper">
-            <a href="#contact" className="connect-button">
+            <a
+              href="mailto:shashwatgupta205@gmail.com"
+              className="connect-button"
+            >
               Let's Connect <ArrowRightIcon size={16} />
             </a>
           </div>

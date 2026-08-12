@@ -91,8 +91,6 @@ const Contact = () => {
           <div className="contact-items">
             <a
               href="mailto:shashwatgupta205@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
               className="contact-link contact-item-email"
             >
               <span className="contact-item-icon">

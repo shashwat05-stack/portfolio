@@ -58,7 +58,7 @@ const SocialSidebar = () => {
       icon: MailIcon,
       href: "mailto:shashwatgupta205@gmail.com",
       class: "sidebar-link-email",
-      external: true,
+      external: false,
     },
   ];
 

@@ -59,9 +59,7 @@ const Navbar = () => {
       </div>
 
       <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=shashwatgupta205%40gmail.com&su=Portfolio%20Contact"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="mailto:shashwatgupta205@gmail.com"
         className="outline-btn nav-btn"
       >
         Let's Talk
