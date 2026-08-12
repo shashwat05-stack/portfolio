@@ -1,114 +1,23 @@
-import { useEffect, useState } from "react";
 import {
-  HomeIcon,
   UserIcon,
-  WrenchIcon,
-  BriefcaseIcon,
-  GraduationCapIcon,
+  DownloadIcon,
   GithubIcon,
+  LinkedinIcon,
+  LeetCodeIcon,
   GfgIcon,
   MailIcon,
-  DownloadIcon,
 } from "./Icons";
 
-const sections = ["home", "about", "skills", "projects", "education", "contact"];
-
 const SocialSidebar = () => {
-  const [activeSection, setActiveSection] = useState("home");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-
-      for (const sectionId of sections) {
-        const section = document.getElementById(sectionId);
-        if (!section) continue;
-
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-
-        if (scrollPosition >= top && scrollPosition < bottom) {
-          setActiveSection(sectionId);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const navItems = [
+  const links = [
     {
-      id: "home",
-      name: "Home",
-      icon: HomeIcon,
-      href: "#home",
-      class: "sidebar-link-home",
-      external: false,
-    },
-    {
-      id: "about",
-      name: "About",
+      name: "Profile",
       icon: UserIcon,
       href: "#about",
-      class: "sidebar-link-about",
+      class: "sidebar-link-profile",
       external: false,
     },
     {
-      id: "skills",
-      name: "Skills",
-      icon: WrenchIcon,
-      href: "#skills",
-      class: "sidebar-link-skills",
-      external: false,
-    },
-    {
-      id: "projects",
-      name: "Projects",
-      icon: BriefcaseIcon,
-      href: "#projects",
-      class: "sidebar-link-projects",
-      external: false,
-    },
-    {
-      id: "education",
-      name: "Education",
-      icon: GraduationCapIcon,
-      href: "#education",
-      class: "sidebar-link-education",
-      external: false,
-    },
-    {
-      id: "github",
-      name: "GitHub",
-      icon: GithubIcon,
-      href: "https://github.com/shashwat05-stack",
-      class: "sidebar-link-github",
-      external: true,
-    },
-    {
-      id: "gfg",
-      name: "GeeksforGeeks",
-      icon: GfgIcon,
-      href: "https://www.geeksforgeeks.org/profile/shashwatg7cp5",
-      class: "sidebar-link-gfg",
-      external: true,
-    },
-    {
-      id: "contact",
-      name: "Contact",
-      icon: MailIcon,
-      href: "#contact",
-      class: "sidebar-link-contact",
-      external: false,
-    },
-    {
-      id: "resume",
       name: "Resume",
       icon: DownloadIcon,
       href: "/Shashwat-Gupta-Resume.pdf",
@@ -116,23 +25,56 @@ const SocialSidebar = () => {
       class: "sidebar-link-resume",
       external: true,
     },
+    {
+      name: "GitHub",
+      icon: GithubIcon,
+      href: "https://github.com/shashwat05-stack",
+      class: "sidebar-link-github",
+      external: true,
+    },
+    {
+      name: "LinkedIn",
+      icon: LinkedinIcon,
+      href: "https://www.linkedin.com/in/shashwat-g-9438a0247/",
+      class: "sidebar-link-linkedin",
+      external: true,
+    },
+    {
+      name: "LeetCode",
+      icon: LeetCodeIcon,
+      href: "https://leetcode.com/u/p2lSQfqYKV/",
+      class: "sidebar-link-leetcode",
+      external: true,
+    },
+    {
+      name: "GeeksforGeeks",
+      icon: GfgIcon,
+      href: "https://www.geeksforgeeks.org/profile/shashwatg7cp5",
+      class: "sidebar-link-gfg",
+      external: true,
+    },
+    {
+      name: "Email",
+      icon: MailIcon,
+      href: "mailto:shashwatgupta205@gmail.com",
+      class: "sidebar-link-email",
+      external: true,
+    },
   ];
 
   return (
-    <aside className="social-sidebar" aria-label="Quick navigation sidebar">
+    <aside className="social-sidebar" aria-label="Floating quick links sidebar">
       <div className="social-sidebar-inner">
-        {navItems.map((item) => {
+        {links.map((item) => {
           const Icon = item.icon;
-          const isActive = activeSection === item.id;
-
           return (
             <a
-              key={item.id}
+              key={item.name}
               href={item.href}
               download={item.download}
               target={item.external ? "_blank" : undefined}
               rel={item.external ? "noopener noreferrer" : undefined}
-              className={`sidebar-icon-btn ${item.class} ${isActive ? "active" : ""}`}
+              className={`sidebar-icon-btn ${item.class}`}
               aria-label={item.name}
             >
               <Icon size={18} />

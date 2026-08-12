@@ -1581,20 +1581,13 @@ body::after {
   color: #ffffff;
 }
 
-.sidebar-link-home:hover, .sidebar-link-home.active { border-color: rgba(146, 92, 255, 0.85); box-shadow: 0 0 20px rgba(146, 92, 255, 0.4); color: #a78bfa; }
-.sidebar-link-about:hover, .sidebar-link-about.active { border-color: rgba(6, 182, 212, 0.85); box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); color: #22d3ee; }
-.sidebar-link-skills:hover, .sidebar-link-skills.active { border-color: rgba(250, 204, 21, 0.85); box-shadow: 0 0 20px rgba(250, 204, 21, 0.4); color: #facc15; }
-.sidebar-link-projects:hover, .sidebar-link-projects.active { border-color: rgba(249, 115, 22, 0.85); box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); color: #f97316; }
-.sidebar-link-education:hover, .sidebar-link-education.active { border-color: rgba(59, 130, 246, 0.85); box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); color: #60a5fa; }
-.sidebar-link-github:hover, .sidebar-link-github.active { border-color: rgba(255, 255, 255, 0.85); box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); color: #ffffff; }
-.sidebar-link-gfg:hover, .sidebar-link-gfg.active { border-color: rgba(47, 141, 70, 0.85); box-shadow: 0 0 22px rgba(47, 141, 70, 0.4); color: #2F8D46; }
-.sidebar-link-contact:hover, .sidebar-link-contact.active { border-color: rgba(236, 72, 153, 0.85); box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); color: #ec4899; }
-.sidebar-link-resume:hover, .sidebar-link-resume.active { border-color: rgba(139, 92, 246, 0.85); box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); color: #c084fc; }
-
-.sidebar-icon-btn.active {
-  transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.08);
-}
+.sidebar-link-profile:hover { border-color: rgba(6, 182, 212, 0.85); box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); color: #06b6d4; }
+.sidebar-link-resume:hover { border-color: rgba(139, 92, 246, 0.85); box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); color: #c084fc; }
+.sidebar-link-github:hover { border-color: rgba(255, 255, 255, 0.85); box-shadow: 0 0 20px rgba(255, 255, 255, 0.35); color: #ffffff; }
+.sidebar-link-linkedin:hover { border-color: rgba(10, 102, 194, 0.85); box-shadow: 0 0 22px rgba(10, 102, 194, 0.4); color: #0a66c2; }
+.sidebar-link-leetcode:hover { border-color: rgba(255, 161, 22, 0.85); box-shadow: 0 0 22px rgba(255, 161, 22, 0.4); color: #ffa116; }
+.sidebar-link-gfg:hover { border-color: rgba(47, 141, 70, 0.85); box-shadow: 0 0 22px rgba(47, 141, 70, 0.4); color: #2F8D46; }
+.sidebar-link-email:hover { border-color: rgba(236, 72, 153, 0.85); box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); color: #ec4899; }
 
 .sidebar-tooltip {
   position: absolute;
