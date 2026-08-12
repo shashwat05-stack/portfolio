@@ -1494,14 +1494,29 @@ body::after {
 
 .form-actions {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+.submit-btn,
+.direct-email-btn {
+  height: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .submit-btn {
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   font-family: inherit;
 }
@@ -1509,11 +1524,6 @@ body::after {
 .submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-}
-
-.direct-email-btn {
-  padding: 12px 20px;
-  font-size: 13px;
 }
 
 /* ---------- MOUSE SPOTLIGHT ---------- */
