@@ -1,8 +1,8 @@
 const Education = () => {
   return (
     <section className="section education-section" id="education">
-      <div className="section-heading">
-        <p>MY JOURNEY</p>
+      <div className="section-heading center-heading reveal">
+        <p className="gradient-label">MY JOURNEY</p>
         <h2>Education</h2>
       </div>
 

@@ -77,7 +77,7 @@ const SocialSidebar = () => {
               className={`sidebar-icon-btn ${item.class}`}
               aria-label={item.name}
             >
-              <Icon size={18} />
+              <Icon size={17} />
               <span className="sidebar-tooltip">{item.name}</span>
             </a>
           );

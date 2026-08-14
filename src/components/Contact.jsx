@@ -68,13 +68,14 @@ const Contact = () => {
         <p className="gradient-label">GET IN TOUCH</p>
 
         <h2>
-          Let's build something <span className="gradient-text">awesome.</span>
+          Let's build something <span className="highlight-text">awesome.</span>
         </h2>
 
-        <p className="contact-description">
-          Have an opportunity, project idea or just want to connect?
-          Feel free to reach out.
-        </p>
+        <span className="section-heading-subtitle contact-subtitle-styled">
+          Have an <span className="subtitle-highlight-green">opportunity</span>,{" "}
+          <span className="subtitle-highlight-green">project idea</span> or just want to connect?{" "}
+          <span className="subtitle-highlight-gold">Feel free to reach out.</span>
+        </span>
       </div>
 
       <div className="contact-grid">
@@ -256,7 +257,7 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                rows="4"
+                rows="3"
                 placeholder="Hi Shashwat, I'd like to discuss..."
                 required
                 className="form-input form-textarea"

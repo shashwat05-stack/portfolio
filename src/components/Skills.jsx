@@ -44,7 +44,7 @@ const OpenAiIcon = ({ size = 18, className = "", style = {} }) => (
   </svg>
 );
 
-// Map each technology to its exact brand icon component and color
+// Map each technology to its exact brand icon component and high-contrast brand color
 const techIconMap = {
   Java: { icon: FaJava, color: "#ED8B00", class: "skill-java" },
   JavaScript: { icon: SiJavascript, color: "#F7DF1E", class: "skill-javascript" },
@@ -52,18 +52,18 @@ const techIconMap = {
   SQL: { icon: SiMysql, color: "#4479A1", class: "skill-sql" },
   HTML: { icon: SiHtml5, color: "#E34F26", class: "skill-html" },
   CSS: { icon: FaCss3Alt, color: "#1572B6", class: "skill-css" },
-  "React.js": { icon: SiReact, color: "#61DAFB", class: "skill-react" },
+  "React.js": { icon: SiReact, color: "#00D8FF", class: "skill-react" },
   Vite: { icon: SiVite, color: "#646CFF", class: "skill-vite" },
   "Node.js": { icon: SiNodedotjs, color: "#339933", class: "skill-node" },
-  "Express.js": { icon: SiExpress, color: "#FFFFFF", class: "skill-express" },
+  "Express.js": { icon: SiExpress, color: "#18221D", class: "skill-express" },
   "REST APIs": { icon: ServerIcon, color: "#06B6D4", class: "skill-api" },
   MongoDB: { icon: SiMongodb, color: "#47A248", class: "skill-mongodb" },
   PostgreSQL: { icon: SiPostgresql, color: "#4169E1", class: "skill-postgres" },
   MySQL: { icon: SiMysql, color: "#4479A1", class: "skill-mysql" },
   Supabase: { icon: SiSupabase, color: "#3ECF8E", class: "skill-supabase" },
   Git: { icon: SiGit, color: "#F05032", class: "skill-git" },
-  GitHub: { icon: SiGithub, color: "#FFFFFF", class: "skill-github" },
-  Vercel: { icon: SiVercel, color: "#FFFFFF", class: "skill-vercel" },
+  GitHub: { icon: SiGithub, color: "#18221D", class: "skill-github" },
+  Vercel: { icon: SiVercel, color: "#18221D", class: "skill-vercel" },
   Netlify: { icon: SiNetlify, color: "#00C7B7", class: "skill-netlify" },
   "OpenAI APIs": { icon: OpenAiIcon, color: "#10A37F", class: "skill-openai" },
   "LLM Prompting": { icon: BrainIcon, color: "#EC4899", class: "skill-llm" },
@@ -122,11 +122,14 @@ const Skills = () => {
       <div className="section-heading center-heading reveal">
         <p className="gradient-label">MY TOOLKIT</p>
 
-        <h2>Skills & Technologies</h2>
+        <h2>
+          Skills & <span className="highlight-text">Technologies</span>
+        </h2>
 
-        <span>
-          Technologies I'm working with and continuously improving.
-        </span>
+        <div className="subtitle-wrapper">
+          <span>Technologies I'm working with and continuously improving.</span>
+          <div className="heading-accent-line"></div>
+        </div>
       </div>
 
       <div className="skills-grid">
@@ -134,25 +137,28 @@ const Skills = () => {
           const GroupIcon = group.icon;
           return (
             <div
-              className={`skill-card skill-${group.color} reveal`}
+              className={`skill-card skill-card-${group.color} reveal`}
               style={{ "--delay": `${index * 80}ms` }}
               key={group.title}
             >
               <div className="skill-top">
                 <div className={`skill-icon skill-icon-${group.color}`}>
-                  <GroupIcon size={22} />
+                  <GroupIcon size={26} />
                 </div>
 
-                <span className="skill-number">{group.number}</span>
+                <span className={`skill-number skill-number-${group.color}`}>
+                  {group.number}
+                </span>
               </div>
 
-              <h3>{group.title}</h3>
+              <h3 className="skill-title">{group.title}</h3>
+              <div className={`skill-header-line line-${group.color}`}></div>
 
               <div className="skill-tags">
                 {group.skills.map((skillName, idx) => {
                   const techInfo = techIconMap[skillName] || {
                     icon: CodeIcon,
-                    color: "#aeb8cc",
+                    color: "#18221D",
                     class: "skill-default",
                   };
                   const TechIcon = techInfo.icon;

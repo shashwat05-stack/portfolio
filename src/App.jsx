@@ -31,12 +31,12 @@ function App() {
 
       {/* Floating Ambient Background Orbs */}
       <div className="background-effects" aria-hidden="true">
-        <span className="bg-orb orb-blue"></span>
-        <span className="bg-orb orb-purple"></span>
-        <span className="bg-orb orb-pink"></span>
-        <span className="bg-orb orb-cyan"></span>
+        <span className="bg-orb orb-forest"></span>
+        <span className="bg-orb orb-gold"></span>
+        <span className="bg-orb orb-emerald"></span>
+        <span className="bg-orb orb-yellow"></span>
         <span className="bg-orb orb-green"></span>
-        <span className="bg-orb orb-orange"></span>
+        <span className="bg-orb orb-deepgreen"></span>
       </div>
 
       <SocialSidebar />
