@@ -42,4 +42,6 @@ export {
   FileText as FileTextIcon,
   GraduationCap as GraduationCapIcon,
   Briefcase as BriefcaseIcon,
+  Menu as MenuIcon,
+  X as CloseIcon,
 } from "lucide-react";

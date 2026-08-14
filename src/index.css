@@ -41,6 +41,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -49,6 +51,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,9 +67,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
+img,
+video,
+svg {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -74,8 +80,17 @@ img {
   color: var(--gold);
 }
 
+/* Helper Visibility Utilities */
+.desktop-only {
+  display: flex !important;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
 /* ==========================================================================
-   NAVBAR (Cream Glass, Modern Logo & Gold Active Underline)
+   NAVBAR & MOBILE DRAWER
    ========================================================================== */
 
 .navbar {
@@ -108,6 +123,7 @@ img {
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--forest-green);
+  z-index: 1001;
 }
 
 .logo span {
@@ -156,6 +172,12 @@ img {
   font-weight: 800;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav-btn {
   padding: 7px 17px !important;
   font-size: 13px !important;
@@ -172,8 +194,94 @@ img {
   color: var(--white) !important;
 }
 
+.hamburger-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--forest-green);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(15, 51, 35, 0.05);
+  transition: all 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background: var(--forest-green);
+  color: var(--white);
+  border-color: var(--forest-green);
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 51, 35, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.25s ease;
+}
+
+.mobile-menu-content {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 20px;
+  box-shadow: 0 12px 30px rgba(15, 51, 35, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-menu-links a {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--forest-green);
+  padding: 10px 14px;
+  border-radius: 11px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-menu-links a.active,
+.mobile-menu-links a:hover {
+  background: var(--forest-green);
+  color: var(--gold);
+}
+
+.mobile-menu-footer {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 /* ==========================================================================
-   GLOBAL LAYOUT & COMPACT SPACING
+   GLOBAL LAYOUT & SPACING
    ========================================================================== */
 
 .section {
@@ -198,8 +306,8 @@ img {
 
 .section-heading h2 {
   font-family: var(--font-display);
-  font-size: clamp(32px, 4vw, 50px);
-  line-height: 1.2;
+  font-size: clamp(28px, 4vw, 50px);
+  line-height: 1.18;
   letter-spacing: -0.005em;
   font-weight: 800;
   color: var(--forest-green);
@@ -275,6 +383,10 @@ img {
     background 0.25s;
 }
 
+.full-width {
+  width: 100% !important;
+}
+
 /* Primary Button: Luminous Gold CTA */
 .primary-btn {
   background: var(--gold);
@@ -308,15 +420,31 @@ img {
 }
 
 .text-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   color: var(--forest-green);
+  font-family: var(--font-display);
   font-weight: 700;
-  margin-top: 14px;
-  transition: color 0.2s, transform 0.2s;
+  font-size: 15px;
+  margin-top: 10px;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.text-link svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
 .text-link:hover {
   color: var(--gold);
+}
+
+.text-link:hover svg {
   transform: translateX(4px);
 }
 
@@ -349,13 +477,14 @@ img {
 .hero h1 {
   font-family: var(--font-display);
 
-  font-size: clamp(48px, 6.8vw, 90px);
+  font-size: clamp(36px, 6.5vw, 90px);
   line-height: 1.02;
   font-weight: 800;
 
   letter-spacing: -0.015em;
   margin: 8px 0 20px;
   color: var(--dark-text);
+  word-break: break-word;
 }
 
 .hero h1 span {
@@ -367,7 +496,7 @@ img {
 
 .hero h2 {
   font-family: var(--font-display);
-  font-size: clamp(17px, 1.7vw, 24px);
+  font-size: clamp(16px, 1.7vw, 24px);
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--forest-green);
@@ -387,12 +516,14 @@ img {
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
 }
 
 .hero-socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   margin-top: 22px;
 }
@@ -429,6 +560,7 @@ img {
   box-shadow: 0 16px 42px rgba(15, 51, 35, 0.22);
   transform: perspective(1200px) rotateY(-3deg);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  max-width: 100%;
 }
 
 .code-window:hover {
@@ -471,9 +603,10 @@ img {
 .code-content {
   padding: 22px;
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: clamp(11.5px, 2.8vw, 13.5px);
   line-height: 1.9;
   color: var(--cream);
+  overflow-x: auto;
 }
 
 .indent {
@@ -540,7 +673,7 @@ img {
 }
 
 /* ==========================================================================
-   ABOUT SECTION (Intentionally Designed Forest Green Container)
+   ABOUT SECTION
    ========================================================================== */
 
 #about {
@@ -590,11 +723,11 @@ img {
 
 .about-text h3 {
   font-family: var(--font-display);
-  font-size: 30px;
+  font-size: clamp(24px, 3.5vw, 30px);
   font-weight: 800;
   line-height: 1.25;
   margin-bottom: 14px;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
   color: var(--white);
 }
 
@@ -664,7 +797,7 @@ img {
 }
 
 /* ==========================================================================
-   SKILLS SECTION (Redesigned Compact & Distinct Accent Cards)
+   SKILLS SECTION
    ========================================================================== */
 
 .skills-section {
@@ -833,6 +966,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 7.5px;
+  max-width: 100%;
   transition: all 0.25s ease;
 }
 
@@ -857,7 +991,7 @@ img {
 }
 
 /* ==========================================================================
-   PROJECTS SECTION (White Cards on Cream Background)
+   PROJECTS SECTION
    ========================================================================== */
 
 .projects-list {
@@ -904,9 +1038,13 @@ img {
   border: 1px solid var(--border-color);
   background: var(--cream);
   transition: transform 0.45s ease, border-color 0.45s ease;
+  width: 100%;
 }
 
 .project-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 0 0 14px 14px;
   transition: transform 0.6s ease;
 }
@@ -959,7 +1097,7 @@ img {
 
 .project-info h3 {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: clamp(22px, 3vw, 26px);
   color: var(--forest-green);
   font-weight: 800;
   margin-bottom: 2px;
@@ -998,6 +1136,7 @@ img {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -1055,7 +1194,7 @@ img {
 }
 
 /* ==========================================================================
-   EDUCATION SECTION (Expanded & Full-Width Presence)
+   EDUCATION SECTION
    ========================================================================== */
 
 #education {
@@ -1102,7 +1241,7 @@ img {
 
 .education-card h3 {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: clamp(20px, 3vw, 24px);
   color: var(--forest-green);
   margin-bottom: 4px;
   font-weight: 800;
@@ -1122,7 +1261,7 @@ img {
 }
 
 /* ==========================================================================
-   RESUME SECTION (Expanded Width & Prominent Banner)
+   RESUME SECTION
    ========================================================================== */
 
 .resume-section {
@@ -1163,7 +1302,7 @@ img {
 
 .resume-box h2 {
   font-family: var(--font-display);
-  font-size: 34px;
+  font-size: clamp(24px, 4vw, 34px);
   font-weight: 800;
   color: var(--white);
   line-height: 1.2;
@@ -1177,6 +1316,7 @@ img {
 
 .resume-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   flex-shrink: 0;
 }
@@ -1289,7 +1429,6 @@ img {
   font-weight: 600;
 }
 
-/* CODING PROFILES CONTAINER FIX - NO OVERLAPS, CLEAN FLEX-WRAP */
 .coding-profiles {
   margin-top: auto;
   padding-top: 18px;
@@ -1381,6 +1520,7 @@ img {
 
 .form-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 12px;
   margin-top: 16px;
@@ -1411,7 +1551,7 @@ img {
 }
 
 /* ==========================================================================
-   FLOATING SOCIAL SIDEBAR (Forest Green Container with Gold Hover States)
+   FLOATING SOCIAL SIDEBAR (Desktop/Tablet Rail)
    ========================================================================== */
 
 .social-sidebar {
@@ -1486,7 +1626,7 @@ img {
 footer {
   max-width: 1230px;
   margin: auto;
-  padding: 22px 0;
+  padding: 22px max(6vw, 20px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1549,14 +1689,16 @@ footer {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS (CRITICAL CLEAN COLLAPSE ON MOBILE)
+   RESPONSIVE BREAKPOINTS (FLUID & ADAPTIVE LAYOUTS)
    ========================================================================== */
 
+/* Tablet & Smaller Screens (< 1000px) */
 @media (max-width: 1000px) {
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 110px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    gap: 30px;
   }
 
   .code-window {
@@ -1587,91 +1729,114 @@ footer {
     order: initial;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .social-sidebar,
   .mouse-spotlight {
-    display: none;
+    display: none !important;
   }
 }
 
-@media (max-width: 760px) {
-  .navbar {
-    padding: 0 16px;
+/* Mobile Screens (< 768px) */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
   }
 
-  .nav-links {
-    display: none;
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .navbar {
+    padding: 0 18px;
+    height: 64px;
   }
 
   .section {
-    padding: 40px 16px;
+    padding: 38px 18px;
   }
 
   #about {
-    margin: 15px 10px;
+    margin: 20px 10px;
     padding: 36px 18px;
-    border-radius: 18px;
+    border-radius: 20px;
   }
 
-  .hero h1 {
-    letter-spacing: -0.03em;
-  }
-
-  .about-cards,
-  .skills-grid {
+  .about-cards {
     grid-template-columns: 1fr;
+  }
+
+  .skills-section {
+    padding: 42px 18px;
   }
 
   .education-card {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 22px;
+    padding: 22px 18px;
+  }
+
+  .resume-section {
+    padding: 24px 18px;
   }
 
   .resume-box {
     flex-direction: column;
     align-items: flex-start;
-    padding: 22px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    padding: 26px 20px;
+    gap: 20px;
   }
 
   .contact-left,
   .contact-card {
-    padding: 22px;
+    padding: 24px 18px;
   }
 
   footer {
-    margin: 0 16px;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     text-align: center;
+    align-items: center;
+    padding: 22px 18px;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
+/* Small Mobile Screens (< 500px & 320px) */
 @media (max-width: 500px) {
   .hero-buttons,
   .project-links,
-  .resume-buttons {
+  .resume-buttons,
+  .form-actions {
     flex-direction: column;
+    width: 100%;
   }
 
   .hero-buttons a,
   .project-links a,
-  .resume-buttons a {
-    width: 100%;
+  .resume-buttons a,
+  .form-actions button,
+  .form-actions a {
+    width: 100% !important;
   }
 
-  .hero h1 {
-    font-size: 42px;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .code-content {
-    padding: 16px;
-    font-size: 11px;
-    overflow-x: auto;
+    padding: 16px 14px;
+    font-size: 11.5px;
+  }
+
+  .indent {
+    padding-left: 14px;
   }
 }
 
